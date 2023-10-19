@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <Script>
+        // ====================================QUESTION=1=================================================
+        // ===. Write a JavaScript function to find the sum of all the elements in an array.===
+        const arr = [1, 2, 3, 4, 7];
+        sum1 = arr.reduce((a, b) => a + b);
+        sum1 = arr.reduce(function (a, b) {
+            return a + b;
+        });
+        console.log(sum1)
+
+
+
+
+        let arr1 = [1, 2, 3, 4, 5];
+        let sum = 0;
+        for (let i = 0; i < arr1.length; i++) {
+            sum += arr1[i];
+        }
+        console.log(sum)
+
+
+        //==========================QUESTION=2===========================================
+        // =============Write a function to reverse a string.============================
+        const z1 = [1, 2, 3, 4];
+        const reverseArray = [];
+        for (let i = z1.length - 1; i >= 0; i--) {
+            const value = z1[i]
+            reverseArray.push(value)
+        }
+        console.log(reverseArray)
+
+
+
+
+        const z2 = [1, 2, 3, 4];
+        console.log(z2.reverse());
+
+        // ===========================Question=3============================
+        // ================== Write a function that checks if a number is even====================
+        function even(e) {
+            if (e % 2 === 0) {
+                console.log("Even Number")
+            } else {
+                console.log("Not a Even Number")
+            }
+        }
+        even(23);
+
+        // ===========================Question=4=============================
+        // =============Write a function that finds the maximum element in an array.========
+        let element = [1, 2, 3, 18, 4, 5, 'sakshi', 'tanishna', true, false, { name: 'sapna', lastname: 'pareek' }]
+        let maxelement = element.length;
+        console.log(maxelement);
+
+
+
+
+
+        // ============================== Question=5 ==========================
+        // ============ Write a function to calculate the factorial of a number=============
+        function expandFactorial(n) {
+            let factorial = 1;
+            for (let i = n; i >= 1; i--) {
+                factorial *= i;
+            }
+            console.log(factorial);
+        };
+        expandFactorial(4);
+
+
+        // ===============================Question = 6 ==============================
+        //=======Write a function to check if a given string is a palindrome===========
+        // (/[^A-Za-z0–9]/g ) or  ( /[\W_]/g)
+        function palindrome(str) {
+            // var re = /[\W_]/g;
+            var lowRegStr = str.toLowerCase();
+            var reverseStr = lowRegStr.split('').reverse().join('');
+            console.log(reverseStr === lowRegStr)
+        }
+        palindrome("mam");
+
+
+        let d = 101;
+        let reverse = d.toString().split('').reverse().join('');
+        console.log(d == reverse);
+        console.log(reverse)
+
+
+
+        // =================================question=7==============================
+        // ==============Write a function to remove duplicates from an array.============
+        let items = [1, 2, 'sakshi', 2, false, 'tarun', true, false, 'tarun', '5', '8', '5'];
+        function removeDup(newItems) {
+            return [...new Set(newItems)]
+        }
+        console.log(removeDup(items));
+
+
+        //============================Question=8=======================================
+        //== Write a function that finds the second smallest number in an array.==
+        let a = [15, 37, 9, 21, 55];
+        let maxValue = -Infinity;
+        let secondMaxValue = -Infinity;
+        for (var i = 0; i < a.length; i++) {
+            maxValue = Math.max(maxValue, a[i])
+        }
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] < maxValue) {
+                secondMaxValue = Math.max(secondMaxValue, a[i])
+            }
+        }
+        console.log('Highest number: ' + maxValue);
+        console.log('Second highest number: ' + secondMaxValue);
+
+
+        let b = [15, 37, 9, 21, 55];
+        let minValue = Infinity;
+        let secondMinValue = Infinity;
+        for (var i = 0; i < b.length; i++) {
+            minValue = Math.min(minValue, a[i])
+        }
+        for (let i = 0; i < b.length; i++) {
+            if (a[i] > minValue) {
+                secondMinValue = Math.min(secondMinValue, a[i])
+            }
+        }
+        console.log('Smallest number: ' + minValue);
+        console.log('Second Smallest number: ' + secondMinValue);
+
+
+
+        //==========================Question=9===============================
+        //====Write a function to check if a number is prime.================
+
+        function isPrime(n) {
+            if (n <= 1) {
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        console.log(isPrime(11));
+
+
+
+
+        // =====================Question-10======================
+        //======= Write a function that returns the reverse of a number.=============
+        function reverseNumber(n) {
+            let value = n.toString().split('').reverse().join('');
+            return parseInt(value);
+        }
+        console.log(reverseNumber(12345678));
+
+
+
+
+
+
+
+
+
+
+
+        //swaping values
+
+        // let a1 = 10;
+        // let b1 = 20;
+        // a1 = a1 + b1;
+        // b1 = a1 - b1
+        // a1 = a1 - b1
+        // console.log(a1)
+        // console.log(b1)
+    </Script>
+</body>
+
+</html>
