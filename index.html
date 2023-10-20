@@ -82,12 +82,12 @@
         //=======Write a function to check if a given string is a palindrome===========
         // (/[^A-Za-z0–9]/g ) or  ( /[\W_]/g)
         function palindrome(str) {
-            // var re = /[\W_]/g;
-            var lowRegStr = str.toLowerCase();
-            var reverseStr = lowRegStr.split('').reverse().join('');
+            var re = /[\W_]/g;
+            let lowRegStr = str.toLowerCase().replace(re, '');
+            let reverseStr = lowRegStr.split('').reverse().join('');
             console.log(reverseStr === lowRegStr)
         }
-        palindrome("mam");
+        palindrome("madam");
 
 
         let d = 101;
